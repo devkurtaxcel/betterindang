@@ -18,6 +18,9 @@ import {
   Calendar,
   Smartphone,
   UserCheck,
+  Globe,
+  Scale,
+  AlertTriangle,
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
@@ -1266,7 +1269,7 @@ export default function YakapInteractive() {
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
-                    {isFil ? '🩺 Libreng Konsulta' : '🩺 Medical Consults'}
+                    {isFil ? 'Libreng Konsulta' : 'Medical Consults'}
                   </button>
                   <button
                     onClick={() => setActiveTab('labs')}
@@ -1276,7 +1279,7 @@ export default function YakapInteractive() {
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
-                    {isFil ? '🧪 13 Laboratory Tests' : '🧪 13 Diagnostic Labs'}
+                    {isFil ? '13 Laboratory Tests' : '13 Diagnostic Labs'}
                   </button>
                   <button
                     onClick={() => setActiveTab('gamot')}
@@ -1286,9 +1289,7 @@ export default function YakapInteractive() {
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
-                    {isFil
-                      ? '💊 ₱20k Gamot Package'
-                      : '💊 ₱20k Medicine Package'}
+                    {isFil ? '₱20k Gamot Package' : '₱20k Medicine Package'}
                   </button>
                   <button
                     onClick={() => setActiveTab('cancer')}
@@ -1298,7 +1299,7 @@ export default function YakapInteractive() {
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                     }`}
                   >
-                    {isFil ? '🎗️ Cancer Screening' : '🎗️ Cancer Screening'}
+                    {isFil ? 'Cancer Screening' : 'Cancer Screening'}
                   </button>
                 </div>
 
@@ -1546,8 +1547,8 @@ export default function YakapInteractive() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                         <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 hover:bg-rose-50/20 dark:hover:bg-rose-900/5 transition-colors">
                           <div className="flex items-start gap-3">
-                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 font-extrabold text-xs shrink-0 mt-0.5">
-                              🎗️
+                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                              <Check className="h-3.5 w-3.5" />
                             </span>
                             <div>
                               <h5 className="font-bold text-sm text-gray-900 dark:text-white leading-tight mb-1">
@@ -1571,11 +1572,11 @@ export default function YakapInteractive() {
 
                         <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 hover:bg-rose-50/20 dark:hover:bg-rose-900/5 transition-colors">
                           <div className="flex items-start gap-3">
-                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 font-extrabold text-xs shrink-0 mt-0.5">
-                              🎗️
+                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                              <Check className="h-3.5 w-3.5" />
                             </span>
                             <div>
-                              <h5 className="font-bold text-sm text-gray-900 dark:text-white leading-tight mb-1">
+                              <h5 className="font-bold text-sm text-gray-950 dark:text-white leading-tight mb-1">
                                 {isFil
                                   ? 'Breast Ultrasound'
                                   : 'Breast Ultrasound'}
@@ -1596,8 +1597,8 @@ export default function YakapInteractive() {
 
                         <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 hover:bg-rose-50/20 dark:hover:bg-rose-900/5 transition-colors">
                           <div className="flex items-start gap-3">
-                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 font-extrabold text-xs shrink-0 mt-0.5">
-                              🎗️
+                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                              <Check className="h-3.5 w-3.5" />
                             </span>
                             <div>
                               <h5 className="font-bold text-sm text-gray-900 dark:text-white leading-tight mb-1">
@@ -1621,8 +1622,8 @@ export default function YakapInteractive() {
 
                         <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 hover:bg-rose-50/20 dark:hover:bg-rose-900/5 transition-colors">
                           <div className="flex items-start gap-3">
-                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 font-extrabold text-xs shrink-0 mt-0.5">
-                              🎗️
+                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                              <Check className="h-3.5 w-3.5" />
                             </span>
                             <div>
                               <h5 className="font-bold text-sm text-gray-900 dark:text-white leading-tight mb-1">
@@ -1646,8 +1647,8 @@ export default function YakapInteractive() {
 
                         <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 hover:bg-rose-50/20 dark:hover:bg-rose-900/5 transition-colors">
                           <div className="flex items-start gap-3">
-                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 font-extrabold text-xs shrink-0 mt-0.5">
-                              🎗️
+                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                              <Check className="h-3.5 w-3.5" />
                             </span>
                             <div>
                               <h5 className="font-bold text-sm text-gray-900 dark:text-white leading-tight mb-1">
@@ -1660,7 +1661,7 @@ export default function YakapInteractive() {
                                   ? 'Pag-scan sa Kalusugan ng Atay'
                                   : 'Upper Abdominal Liver Scan'}
                               </p>
-                              <p className="text-[11px] text-gray-650 dark:text-gray-355 leading-relaxed">
+                              <p className="text-[11px] text-gray-655 dark:text-gray-355 leading-relaxed">
                                 {isFil
                                   ? 'Ultrasound imaging ng atay upang makita ang mga bukol (tumors), cirrhosis, o fatty liver, lalo na para sa mga may hepatitis B/C o chronic liver disease.'
                                   : 'Ultrasound imaging of the liver to detect lesions, tumors, cirrhosis, or fatty liver, particularly for chronic hepatitis B/C patients.'}
@@ -1671,8 +1672,8 @@ export default function YakapInteractive() {
 
                         <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 hover:bg-rose-50/20 dark:hover:bg-rose-900/5 transition-colors">
                           <div className="flex items-start gap-3">
-                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 font-extrabold text-xs shrink-0 mt-0.5">
-                              🎗️
+                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5">
+                              <Check className="h-3.5 w-3.5" />
                             </span>
                             <div>
                               <h5 className="font-bold text-sm text-gray-900 dark:text-white leading-tight mb-1">
@@ -1693,7 +1694,7 @@ export default function YakapInteractive() {
                         </div>
                       </div>
 
-                      <div className="p-4 rounded-2xl bg-amber-50/40 dark:bg-amber-900/10 border border-amber-200/50 dark:border-amber-950/30 text-amber-900 dark:text-amber-200 mt-2 text-xs leading-relaxed font-semibold">
+                      <div className="p-4 rounded-2xl bg-amber-50/40 dark:bg-amber-900/10 border border-amber-200/50 dark:border-amber-955/30 text-amber-900 dark:text-amber-200 mt-2 text-xs leading-relaxed font-semibold">
                         {isFil
                           ? 'Paalala: Upang ma-avail ang mga cancer screening tests na ito ng LIBRE (Zero Copay), kinakailangan ang klinikal na rekomendasyon at opisyal na referral letter mula sa inyong doktor sa Indang Rural Health Unit (RHU).'
                           : 'Please Note: To avail of these specialized cancer screening tests completely free of charge (Zero Copay), a clinical indication and an official referral letter from your doctor at the Indang Rural Health Unit (RHU) are strictly required.'}
@@ -2208,8 +2209,8 @@ export default function YakapInteractive() {
                   <div className="mt-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 text-emerald-900 dark:text-emerald-300 text-center animate-fade-in">
                     <p className="text-xs font-black mb-1">
                       {isFil
-                        ? '🎉 Mahusay! Handa ka na!'
-                        : '🎉 Congratulations! You are Ready!'}
+                        ? 'Mahusay! Handa ka na!'
+                        : 'Congratulations! You are Ready!'}
                     </p>
                     <p className="text-[10px]">
                       {isFil
@@ -2638,7 +2639,7 @@ export default function YakapInteractive() {
                 className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 bg-gray-50 dark:bg-gray-800/40 hover:bg-white dark:hover:bg-gray-800 transition-all group flex gap-3 pointer-events-auto cursor-pointer"
               >
                 <div className="p-3 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-xl shrink-0 h-11 w-11 flex items-center justify-center font-bold">
-                  🌐
+                  <Globe className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm text-gray-950 dark:text-white leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -2664,10 +2665,10 @@ export default function YakapInteractive() {
                 className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 bg-gray-50 dark:bg-gray-800/40 hover:bg-white dark:hover:bg-gray-800 transition-all group flex gap-3 pointer-events-auto cursor-pointer"
               >
                 <div className="p-3 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-xl shrink-0 h-11 w-11 flex items-center justify-center font-bold">
-                  📱
+                  <Smartphone className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm text-gray-950 dark:text-white leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-450 transition-colors">
+                  <h4 className="font-bold text-sm text-gray-950 dark:text-white leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-455 transition-colors">
                     {isFil
                       ? 'eGovPH Pambansang Portal'
                       : 'eGovPH National Portal'}
@@ -2685,7 +2686,7 @@ export default function YakapInteractive() {
 
               <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 flex gap-3">
                 <div className="p-3 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-xl shrink-0 h-11 w-11 flex items-center justify-center font-bold">
-                  📄
+                  <FileText className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm text-gray-950 dark:text-white leading-tight">
@@ -2704,7 +2705,7 @@ export default function YakapInteractive() {
 
               <div className="p-4 rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/40 flex gap-3">
                 <div className="p-3 bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 rounded-xl shrink-0 h-11 w-11 flex items-center justify-center font-bold">
-                  ⚖️
+                  <Scale className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm text-gray-950 dark:text-white leading-tight">
@@ -2727,7 +2728,7 @@ export default function YakapInteractive() {
           <div className="mt-12 max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-amber-50/40 dark:bg-amber-950/10 border border-amber-200/50 dark:border-amber-900/30">
             <div className="flex gap-4">
               <div className="p-3 bg-amber-100 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 rounded-2xl shrink-0 h-12 w-12 flex items-center justify-center font-bold">
-                ⚠️
+                <AlertTriangle className="h-5 w-5" />
               </div>
               <div>
                 <h4 className="font-extrabold text-sm sm:text-base text-amber-950 dark:text-amber-300 mb-2 leading-tight uppercase tracking-wider">

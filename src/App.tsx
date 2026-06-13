@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/layout/Navbar';
@@ -18,6 +19,27 @@ import Sitemap from './pages/Sitemap';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
+  // Clean up social media referral parameters (fbclid, brid) on load
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href);
+      let changed = false;
+      if (url.searchParams.has('fbclid')) {
+        url.searchParams.delete('fbclid');
+        changed = true;
+      }
+      if (url.searchParams.has('brid')) {
+        url.searchParams.delete('brid');
+        changed = true;
+      }
+      if (changed) {
+        window.history.replaceState({}, '', url.pathname + url.search);
+      }
+    } catch (e) {
+      console.error('Failed to clean tracking query parameters:', e);
+    }
+  }, []);
+
   return (
     <HelmetProvider>
       <Router>
